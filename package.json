@@ -1,0 +1,59 @@
+{
+  "name": "progress-summary",
+  "version": "1.0.0",
+  "description": "Summary tool for neo-project, neo-ngd, CityOfZion, NewEconoLab and NeoResearch",
+  "scripts": {
+    "deploy": "node ghpages.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:build": "parcel ./src/index.html --no-cache",
+    "build": "rimraf dist && parcel build ./src/index.html --no-cache --public-url /progress-summary",
+    "tslint": "npx tslint --config tslint.json --project tsconfig.json",
+    "prettier": "npx prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "start": "npm run prettier && npm run tslint && npm run dev:build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/be-neo/progress-summary.git"
+  },
+  "keywords": [],
+  "author": "Jeroen Peeters <contact@jeroenpeeters.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/be-neo/progress-summary/issues"
+  },
+  "homepage": "https://github.com/be-neo/progress-summary#readme",
+  "dependencies": {
+    "antd": "^3.10.9",
+    "axios": "0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "nano-css": "^3.4.0",
+    "prop-types": "15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-ion-store": "^0.7.1",
+    "recompose": "^0.30.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@types/react": "^16.7.7",
+    "@types/react-dom": "^16.0.10",
+    "@types/recompose": "^0.27.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-import": "^1.9.1",
+    "gh-pages": "1.2.0",
+    "less": "^2.7.3",
+    "parcel-bundler": "^1.10.3",
+    "prettier": "1.14.2",
+    "rimraf": "2.6.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.6"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
